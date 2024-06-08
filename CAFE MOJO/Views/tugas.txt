@@ -1,0 +1,46 @@
+TUGAS
+
+
+==> ADMIN:
+1.) Buat file baru "dashboard.php"
+2.) Buat kolom baru didalam table "orders" yang bernama "order_status" dengan tipe data enum('pending', 'processing', 'completed')
+3.) Didalam "dashboard.php", tampilkan semua data dari table "orders"
+4.) Buat table baru "admins" yang berisi (id, username, password)
+5.) Didalam "dashboard.php", buat form Register untuk data admin baru
+6.) Tampilan frontend biar Iqbal yang urus nanti kalau tugas sudah selesai
+    --> pastikan password saat register di encrypt
+    --> Encrypt password menggunakan fungsi PHP "password_hash( $password, PASSWORD_DEFAULT )"
+
+
+==> INPUT MENU:
+1.) Buat form untuk input menu baru
+2.) Sesuaikan inputan dengan data kolom di table "menus"
+3.) Pindahkan gambar menu ke direktori "Resources/Menus/Foods ? Drinks"
+4.) Simpan data menu baru kedalam table "menus"
+    --> Cek kesesuaian data, jangan sampai ada typo dan perhatikan mana yang huruf kapital dan huruf kecil
+    --> Sebelum pemindahan gambar menu, lakukan pengecekan dahulu apakah menu tersebut termasuk "foods" atau "drinks"
+    --> Jika kategori menu termasuk dalam makanan, maka simpan gambar menu ke "Resources/Menus/Foods"
+    --> Jika kategori menu termasuk dalam minuman, maka simpan gambar mnu ke "Resources/Menus/Drinks"
+    --> Pastikan data kolom "menu_image" di table "menus" hanya menyimpan nama gambar saja seperti "gambar.jpg" bukan direktori gambar
+    --> Contoh data kolom "menu_image" BENAR: "gambar.jpg"
+    --> Contoh data kolom "menu_image" SALAH: "Resources/Menus/Foods/gambar.jpg"
+
+
+==> AUTH:
+1.) Buat form Login didalam direktori "Views/auth/login.php"
+2.) Data admin (username & password) berasal dari database
+3.) Hanya data yang ada didalam table "admins" yang bisa login
+4.) Setelah login berhasil, arahkan halaman ke direktori "Views/admin/dashboard.php" 
+    --> verifikasi password yang di encrypt / bandingkan password inputan dan password yang tersimpan di database
+    --> verifikasi password menggunakan fungsi PHP "password_verify( $password_inputan, $password_database )"
+
+
+==> PEMESANAN MEJA
+1.) Buat setiap pilihan meja di "table.php" akan muncul pop up sebelum berpindah halaman ke "design.php"
+2.) Pop up berisi form inputan untuk: nama_perwakilan dan pemesanan_kapasitas_meja
+3.) Kirim data nama_perwakilan dan pemesanan_kapasitas_meja ke "design.php" menggunakan parameter di URL (Sudah ada contoh sebelumya, yaitu tableName)
+4.) Terima data nama_perwakilan dan pemesanan_kapasitas_meja di "design.php" dengan metode $_GET dan simpan kedalam variable
+
+
+
+NOTE: Jika ada yang ditanyakan hubungi Iqbal
